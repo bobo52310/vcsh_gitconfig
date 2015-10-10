@@ -1,0 +1,32 @@
+[alias]
+    br = branch
+    cm = commit -v
+    co = checkout
+    dc = diff --cached --word-diff=color
+    di = diff --word-diff=color
+    gl = log --decorate --graph --pretty=oneline
+    log = log --decorate --graph
+    # log -p 會顯示修改
+    # st = status -bs #bs會變成縮寫
+    st = status
+    up = "!git remote update -p; git merge --ff-only @{u}"
+[color]
+    ui = auto
+[core]
+    preloadindex = yes
+	editor = vim
+[merge]
+    tool = vimdiff
+[push]
+    default = matching
+[user]
+    name = Bobo Chen
+    email = bobochen@kkbox.com
+    # name = bobo52310
+    # email = bobo52310@gmail.com
+[branch]
+	autosetuprebase = always
+
+[diff]
+    # 使用 icdiff 來取代內建的 diff
+    external = ~/bin/git-diff-wrapper.sh
